@@ -1,0 +1,66 @@
+//./PmergeMe 2 3 5 4 1 7 8 9
+
+// on commence le tri par fusion-insertion en separant tous les nombres par pair
+// dans deux conteneurs, dans le premier on met le plus grand de la pair
+// dans l'autre le plus petit, deux par deux depuis le premier
+
+// 3 5 7 9
+// 2 4 1 8
+// (dans le cas d'un nombre impair, ajouter le dernier tout seul dans
+// le conteneur des petits)
+
+// ensuite on trie le conteneur de grands, et on bouge aussi leur paires
+
+// 3 5 7 9
+// 2 4 1 8
+
+// Utilisation de la suite de jacobsthal pour fusionner les conteneurs
+
+// on a donc :
+
+// 3 5 7 9
+// 2 4 1 8
+
+// d'office envoyer le premier de la liste 2 vers liste 1
+
+// 2 3 5 7 9
+// 2 4 1 8
+
+// i = 1
+
+// ensuite si la taille de depart de la liste 1 est superieure au ieme element de 
+// la suite de jacob (3 au demarrage donc) :
+
+// on fait defiler un iterateur sur liste 2 jusqu'a ce qu'un compteur de 1
+// arrive a jacob[i] puis on cherche le premier element a partir duquel ranger
+// l'element de liste2 :
+
+// iterateur liste2 = 1 
+// 1 < 2 donc on peut directement le placer 
+
+// 1 2 3 5 7 9
+// 2 4 1 8
+
+// puis on fait pareil pour jacob[i] - jacob[i - 1] (== 2 dans ce cas)
+// avec count qui demarre a 1 et dans la boucle on decremente l'iterateur sur 
+// liste2, on remet un iterateur sur liste1 au debut
+// puis on cherche de nouveau le moment ou it devient superieur a temp et on 
+// insert
+
+// 1 2 3 4 7 9
+// 2 4 1 8
+
+// on recommence en incrementant i si besoin
+// toujours en gardant la taille de depart de liste1 (4 dans cet exemple)
+
+// on fini en dehors de la boucle par chercher le dernier element ou
+// les 2 derniers elements dans le cas d'un nombre d'arguments impair
+
+// on remet l'iterateur de liste2 au debut et on l'avance jusqu'a ce que count=0
+// arrive a jacob[i -1] puis apres ca tant que l'iterateur liste2 est pas au bout
+// on remet iterateur liste1 au debut et on recherche soit *it1 < *it2 soit que 
+// it1 arrive au bout du conteneur. Auxquels cas on va respectivement insert 
+// ou simplement push_back et on avance de 1 l'iterateur liste2
+// pour recommencer cette boucle
+
+// 1 2 3 4 5 7 8 9

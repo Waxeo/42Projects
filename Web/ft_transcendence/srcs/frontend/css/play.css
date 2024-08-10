@@ -1,0 +1,41 @@
+.buttons {
+	position: flex;
+	display: block;
+	background-color: #719fee;
+	border-radius: 10px;
+	border: 4px double #1f69ec;
+	color: #ffffff;
+	text-align: center;
+	font-size: 20px;
+	padding: 10px;
+	width: 200px;
+	cursor: pointer;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.buttons:hover {
+	background-color: #ffffff;
+	border: 2px solid #1f69ec;
+	box-shadow: 10px 5px 5px #719fee;
+	color: #1f69ec;
+	text-align: center;
+	font-size: 22px;
+}
+
+#bouton1 {
+	top: 30%;
+	left: 25%;
+}
+
+#bouton2 {
+	top: 30%;
+	left: 50%;
+}
+
+#bouton3 {
+	top: 50%;
+	left: 35%;
+}

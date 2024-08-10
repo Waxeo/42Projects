@@ -1,0 +1,20 @@
+.wrapper .not-sent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.not-sent label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.not-sent a{
+    color: #fff;
+    text-decoration: none;
+}
+.not-sent a:hover {
+    text-decoration: underline;
+}

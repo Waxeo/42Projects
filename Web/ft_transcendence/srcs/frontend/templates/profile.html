@@ -1,0 +1,67 @@
+<div class="centered-div">
+    <div class="cardprofile" style="width: 60%;">
+        <section style="background-color: rgba(0, 0, 0, 0.3); border-radius: .25rem;">
+            <div class="row">
+            <div class="col">
+                <div class="card mb-4">
+                <div class="card-body text-center">
+                    <img alt="avatar" id="profile-image"
+                    class="rounded-circle img-fluid" style="width: 150px;">
+                    <h5 class="my-3" id="nickname"></h5>
+                    <p class="text-muted mb-1" id="email"></p>
+                    <div class="d-flex justify-content-center mb-2">
+                    <a href="/nickname"data-mdb-button-init data-mdb-ripple-init id="nickname-btn" class="btn btn-primary">Edit nickname</a>
+                    </div>
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <input type="file" id="imageUpload" name="image" class="inputfile" accept=".jpg, .jpeg, .png" />
+                        <label for="imageUpload">Choose profil image</label>
+                        <button type="button" onclick="uploadImage()">Upload</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+                <div class="col">
+                    <div class="card mb-4">
+                    <div class="card-body">
+                        <p class="mb-4">Stats</p>
+                        <p class="mb-1" style="font-size: .77rem;">Games played</p>
+                        <p id="total-games"></p>
+                        <p class="mt-4 mb-1" style="font-size: .77rem;">Games won</p>
+                        <p id="won-games"></p>
+                        <p class="mt-4 mb-1" style="font-size: .77rem;">Games lost</p>
+                        <p id="lost-games"></p>
+                        <p class="mt-4 mb-1" style="font-size: .77rem;">Win percentage</p>
+                        <p id="ratio-games"></p>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col">
+                <div class="card mt-4">
+                <div class="card-body scroll ">
+                <p class="mb-4">Friends List</p>
+                <form id="friend-form">
+                    <div class="input-group rounded" style="display: flex; align-items: center;">
+                        <input type="search" class="form-control rounded" placeholder="Search" id="username" name="username" aria-label="Search" aria-describedby="search-addon"/>
+                        <button type="submit" class="btn btn-primary">Add friend</button>
+                    </div>
+                    <div id="login-status" class="col"></div>
+                </form>
+                <ul class="list-group list-group-flush" id="friends"></ul>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+                <div class="card mt-4">
+                <div class="card-body scroll">
+                    <p class="mb-4">Game History</p>
+                    <ul class="list-group list-group-flush" id="history"></ul>
+                </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div>
+</div>

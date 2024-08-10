@@ -1,0 +1,41 @@
+<div id="playerForm" class="centered-div">
+	<div class="row" style="margin-bottom: 1rem;">
+		<div class="wrapper" id="playerSelection">
+			<div class="player input-box">
+				<label for="player1">Joueur 1:</label>
+				<input type="text" id="player1" placeholder="Nom du Joueur 1" required>
+			</div>
+			<div class="player input-box">
+				<label for="player2">Joueur 2:</label>
+				<input type="text" id="player2" placeholder="Nom du Joueur 2" required>
+			</div>
+			<div class="player input-box">
+				<label for="player3">Joueur 3:</label>
+				<input type="text" id="player3" placeholder="Nom du Joueur 3" required>
+			</div>
+			<div class="player input-box">
+				<label for="player4">Joueur 4:</label>
+				<input type="text" id="player4" placeholder="Nom du Joueur 4" required>
+			</div>
+			<p>Player 1 is the connected user</p>
+			<button class="btn" id="startTournament" onclick="startTournament()">Commencer le Tournoi</button>
+			<div id="login-status" class="col text-center"></div>
+		</div>
+	</div>
+</div>
+<div id="gameContainer" style="padding-top: 200px;">
+	<div id="countdown">Starting in 3</div>
+	<div id="scoreboard">
+		<div id="score1">0</div>
+		<div id="score2">0</div>
+	</div>
+	<div id="playerNames">
+		<div id="playerA"></div>
+		<div id="playerB"></div>
+	</div>
+	<div id="gameCanvas"></div>
+	<div>
+		<p id="winScreen"></p>
+	</div>
+	<div id="rule">First to 7 Wins</div>
+</div>

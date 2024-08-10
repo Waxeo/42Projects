@@ -1,0 +1,79 @@
+.cardprofile {
+  backdrop-filter: blur(12px);
+  margin-bottom: 100px;
+}
+
+.status-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: grey;
+  border: 2px solid white;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.icon-container {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.scroll {
+  height: 360px;
+  overflow-y: auto;
+}
+
+.borderless {
+  border-top: 0 none;
+}
+
+.link-dark {
+  text-decoration: none;
+}
+
+.input-group {
+width:300px;
+}
+
+.search-addon {
+width: 500px;
+}
+
+#imageUpload {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+  font-family: "Space mono", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  background-color: #0d6efd;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: .25rem;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: black;
+}

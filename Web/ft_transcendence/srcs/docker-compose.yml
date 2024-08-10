@@ -1,0 +1,57 @@
+services:
+  db:
+    container_name: db
+    image: postgres
+    ports:
+      - "${DB_PORT}:5432"
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - transcendence
+    restart: on-failure  
+    init: true 
+    env_file:
+      - .env
+
+  django:
+    container_name: django
+    build:
+      context : .
+      dockerfile : ./docker/django.Dockerfile
+    ports:
+      - "8000:8000"
+    networks:
+      - transcendence  
+    depends_on:
+      - db
+    restart: on-failure  
+    init: true  
+    env_file:
+      - .env
+
+
+  nginx:
+    build:
+      context: .
+      dockerfile: ./docker/nginx.Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - django  
+    networks:
+      - transcendence
+    restart: on-failure  
+    init: true 
+    env_file:
+      - .env   
+
+volumes:
+  db-data:
+
+networks:
+  transcendence:
+    driver: bridge

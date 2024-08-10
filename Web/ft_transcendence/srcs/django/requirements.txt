@@ -1,0 +1,9 @@
+Django>=5.0
+psycopg2>=2.8
+python-dotenv
+Pillow
+django-oauth-toolkit
+oauthlib
+requests_oauthlib
+djangorestframework>=3.15
+djangorestframework_simplejwt

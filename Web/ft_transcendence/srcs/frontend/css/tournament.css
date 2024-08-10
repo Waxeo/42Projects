@@ -1,0 +1,30 @@
+#startTournament {
+	text-align: center;
+}
+
+#hidden {
+	display: none;
+}
+
+#gameContainer {
+	display: none;
+}
+
+.winner-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 90px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.winner-message::after {
+    content: "\1F3C6"; /* Emoji du trophée */
+    font-size: 1.5em; /* Taille de police ajustable */
+    margin-left: 10px; /* Marge à gauche de l'emoji */
+}
