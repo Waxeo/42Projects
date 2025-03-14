@@ -1,5 +1,7 @@
 # Transcendance
 
+![transGif](https://github.com/user-attachments/assets/b5ff62ee-58f8-4c63-b009-bd2343788b02)
+
 ## SUJET
 
 Ce projet consiste à créer un site web pour participer à une compétition du célèbre jeu Pong !
